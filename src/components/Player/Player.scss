@@ -1,0 +1,35 @@
+// src/components/Player/Player.scss
+@import "../../style/config";
+
+.Player {
+  display: block; // instead of list-item
+  background: $light;
+  position: relative;
+
+  p {
+    margin: 0;
+    padding: 0.3rem 0.7rem 0.7rem
+  }
+
+  .percentage_coloring {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.4rem;
+    background: $primary; // fallback for if the browser does not support gradients
+    background: linear-gradient(90deg, $secondary, $primary);
+    //CSS Transitions 
+    transition: all 0.2s ease;
+}
+
+&:hover .percentage_coloring {
+  transform: scale(1, 2);
+  background: linear-gradient(90deg, #bf0073, #0ff2b9);
+  }
+
+  //styling the increment button 
+button {
+    background-color: lightsalmon;
+}
+
+}
